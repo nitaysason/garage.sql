@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}Update Car{% endblock %}
+{% block head %}
+  {{ super() }}
+  <!-- Additional head content goes here -->
+{% endblock %}
+
+{% block content %}
+  <h2>Update Car</h2>
+  <form method="POST" action="{{ url_for('update_car', car_id=car[0]) }}">
+    <label for="color">Color:</label>
+    <input type="text" id="color" name="color" value="{{ car[1] }}" required><br>
+
+    <label for="model">Model:</label>
+    <input type="text" id="model" name="model" value="{{ car[2] }}" required><br>
+
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" name="brand" value="{{ car[3] }}" required><br>
+    
+    <input type="submit" value="Update">
+  </form>
+{% endblock %}

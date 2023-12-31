@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  
+{% endblock %}
+{% block content %}
+<h1>cars list</h1>
+<ul>
+    {% for car in garage %}
+    <li>{{ car[0] }} - {{ car[1] }} - {{ car[2] }}</li>
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}
