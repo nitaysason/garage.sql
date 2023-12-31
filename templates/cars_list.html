@@ -24,12 +24,15 @@
           <td>{{ car[1] }}</td>
           <td>{{ car[2] }}</td>
           <td>{{ car[3] }}</td>
-          <td>
-            <a href="{{ url_for('update_car', car_id=car[0]) }}" >  <input type="submit" value="Update"></a>
-            <form method="POST" action="{{ url_for('delete_garage', garage_id=car[0]) }}" >
-              <input type="submit" value="Delete">
+        
+          <td style="display: flex; justify-content: space-between;">
+            <a href="{{ url_for('update_car', car_id=car[0]) }}" style="text-decoration: none;">
+                <input type="submit" value="Update" style="color: black; width: 80px;">
+            </a>
+            <form method="POST" action="{{ url_for('delete_garage', garage_id=car[0]) }}">
+                <input type="submit" value="Delete" style="color: black; width: 80px;">
             </form>
-          </td>
+        </td>
         </tr>
       {% endfor %}
     </tbody>
