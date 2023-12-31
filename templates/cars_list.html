@@ -9,13 +9,14 @@
   <h2>Cars List</h2>
   <table border="1">
     <thead>
-      <tr>
-        <th>ID</th>
-        <th>Color</th>
-        <th>Model</th>
-        <th>Brand</th>
-        <th>Action</th>
-      </tr>
+     <tr>
+    <th>ID</th>
+    <th>Color </th>
+    <th>Model </th>
+    <th>Brand </th>
+    <th>Action</th>
+</tr>
+
     </thead>
     <tbody>
       {% for car in garage %}
@@ -27,10 +28,10 @@
         
           <td style="display: flex; justify-content: space-between;">
             <a href="{{ url_for('update_car', car_id=car[0]) }}" style="text-decoration: none;">
-                <input type="submit" value="Update" style="color: black; width: 80px;">
+                <input type="submit" value="Update" style="color: black; width: 80px;background-color: rgb(121, 118, 153);">
             </a>
             <form method="POST" action="{{ url_for('delete_garage', garage_id=car[0]) }}">
-                <input type="submit" value="Delete" style="color: black; width: 80px;">
+                <input type="submit" value="Delete" style="color: black; width: 80px;background-color: red;">
             </form>
         </td>
         </tr>
